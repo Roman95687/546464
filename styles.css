@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+}
+
+.text {
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.heart {
+    font-size: 48px;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Анимация сжатия текста */
+.shrink {
+    animation: shrinkText 1s forwards;
+}
+
+/* Анимация появления сердца */
+.show-heart {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@keyframes shrinkText {
+    0% { letter-spacing: 10px; }
+    100% { letter-spacing: -5px; }
+}
